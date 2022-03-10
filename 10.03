@@ -1,0 +1,55 @@
+(***ЗАДАНИЕ 2***)
+
+students = ["Вася", "Маша", "Петя", "Дима", "Марина", "Люба", "Коля", "Ваня"]
+grades = {"Вася" : 4, "Петя" : 9, "Марина" : 8, "Люба" : 4, "Коля" : 5, "Ваня": 10}
+for i in students:
+    if i in grades:
+        print(f"{i} оценка:{grades[i]} ")
+    else:
+        print(f"{i} контрольную работу не писал")
+print(" ")  
+
+for i in students:
+    if i in grades:
+        if grades[i] >= 8:
+            print(f"{i}")
+
+good = []
+bad = []
+for i in students:
+    if i in grades:
+        if grades[i] >= 6:
+            good.append([i])
+        else:
+            bad.append([i])
+print(good)
+print(bad)
+
+
+(*** ЗАДАНИЕ 3***)
+
+summa = 0
+k = 0
+marks = {'Mary' : [5, 8, 9, 10, 3, 5, 6, 6],
+        'John' : [3, 3, 6, 8, 2, 1, 8, 5],
+        'Alex' : [4, 4, 7, 4, 7, 3, 2, 9],
+        'Patricia' : [2, 1, 6, 8, 2, 3, 7,4]}
+course = int(input ("Введите курс: "))
+for item in marks:
+    k += 1;
+    summa = summa + marks[item][course-1];
+print (f"Средняя оценка за {course} курс равна {round(summa/k)}")
+
+(***ЗАДАНИЕ 4***)
+
+marks = {'Mary' : [5, 8, 9, 10, 3, 5, 6, 6],
+        'John' : [3, 3, 6, 8, 2, 1, 8, 5],
+        'Alex' : [4, 4, 7, 4, 7, 3, 2, 9],
+        'Patricia' : [2, 1, 6, 8, 2, 3, 7, 4]}
+k=0
+mark=int(input ("Введите оценку: "))
+for i in marks:
+    for i in marks[i]:
+        if i >= mark:
+            k = k + 1
+print (f"Количество оценок выше или равных {mark} равно {k} ")
