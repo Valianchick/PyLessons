@@ -100,7 +100,7 @@ while True:
     elif com == 's':
         num = input("Введите номер документа: ")
         s(num)
-    elif com == 'l':
+    elif com == '/':
         l()
     elif com == 'ads':
         num = input("Введите номер полки: ")
